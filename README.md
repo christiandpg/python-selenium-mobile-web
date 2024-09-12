@@ -1,5 +1,5 @@
 # 🧪 Test Automation - Mobile Web - Python, Pytest, Selenium
-The purpose of this project is to implement an automated tests using python. The test will open the browser emulating a 
+The purpose of this project is to implement an automated test using python. The test will open the browser emulating a 
 mobile device, go to Twitch website, search for a streamer and wait until the video loads. 
 At the end a screenshot is saved at `screenshots` folder.
 
@@ -13,8 +13,8 @@ Ensure you have the following installed before running the project:
 ## 🚀 Setup
 1. Clone the repository:
 ``````
-git clone https://github.com/christiandpg/python-selenium-web
-cd python-selenium-web
+git clone https://github.com/christiandpg/python-selenium-mobile-web.git
+cd python-selenium-mobile-web
 ``````
 
 2. Install dependencies using Poetry:
