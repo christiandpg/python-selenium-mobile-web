@@ -24,6 +24,9 @@ jobs:
           curl -sSL https://install.python-poetry.org | python3 -
           echo "$HOME/.local/bin" >> $GITHUB_PATH
 
+      - name: Regenerate lock file
+        run: poetry lock
+
       - name: Install dependencies
         run: poetry install
 
@@ -42,9 +45,6 @@ jobs:
           unzip chromedriver_linux64.zip
           chmod +x chromedriver
           sudo mv chromedriver /usr/local/bin/
-
-      - name: Regenerate lock file
-        run: poetry lock
 
       - name: Run tests with pytest
         run: |
