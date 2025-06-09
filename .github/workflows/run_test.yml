@@ -43,6 +43,9 @@ jobs:
           chmod +x chromedriver
           sudo mv chromedriver /usr/local/bin/
 
+      - name: Regenerate lock file
+        run: poetry lock
+
       - name: Run tests with pytest
         run: |
           poetry run pytest
