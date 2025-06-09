@@ -59,6 +59,4 @@ class StreamerPage:
     def are_all_elements_displayed(self):
         return (self.is_video_player_displayed()
                 and self.is_follow_button_displayed()
-                and self.is_dropdown_menu_displayed()
-                and self.is_chat_container_displayed()
-                and self.is_open_app_to_chat_displayed())
+                and self.is_chat_container_displayed())

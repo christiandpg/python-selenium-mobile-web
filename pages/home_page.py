@@ -5,7 +5,7 @@ class HomePage:
     def __init__(self, driver):
         self.driver = driver
         self.helper = SeleniumHelpers(driver)
-        self.search_icon_css = "a[aria-label='Search']"
+        self.search_icon_xpath = "//div[text()='Browse']"
         self.main_content_wrapper_id = "page-main-content-wrapper"
 
     def is_main_wrapper_displayed(self):
@@ -16,5 +16,5 @@ class HomePage:
             return False
 
     def click_on_search_button(self):
-        search_icon = self.helper.wait_for_element_clickable_by_css(self.search_icon_css)
+        search_icon = self.helper.wait_for_element_clickable_by_xpath(self.search_icon_xpath)
         search_icon.click()

@@ -16,8 +16,8 @@ class SearchResultPage:
 
     def click_on_random_channel(self):
         channel_img = self.helper.wait_for_all_elements_by_css(self.channels_css)
-        count = len(channel_img)
-        channel_img[count-1].click()
+        if channel_img:
+            channel_img[0].click()
 
     def scroll_down_search_results(self, scroll_count):
         self.helper.scroll_web_page(scroll_count)

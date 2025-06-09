@@ -19,6 +19,9 @@ class SeleniumHelpers:
     def wait_for_element_clickable_by_css(self, element_id, timeout=10):
         return WebDriverWait(self.driver, timeout).until(EC.element_to_be_clickable((By.CSS_SELECTOR, element_id)))
 
+    def wait_for_element_clickable_by_xpath(self, element_id, timeout=10):
+        return WebDriverWait(self.driver, timeout).until(EC.element_to_be_clickable((By.XPATH, element_id)))
+
     def wait_for_all_elements_by_css(self, element_id, timeout=10):
         return WebDriverWait(self.driver, timeout).until(EC.presence_of_all_elements_located((By.CSS_SELECTOR, element_id)))
 
